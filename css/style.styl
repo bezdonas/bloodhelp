@@ -1,3 +1,98 @@
+@import 'nib'
+global-reset()
+reset-html5()
 
-body 
-	background: red
+// Variables
+body_bg = #fff
+header_bg = #ffcccc
+footer_bg = #ffcccc
+content_bg = #fff
+link_color = #3399cc
+link_colorh = #cc3333
+text_color = #000
+
+font_size = 17px
+header_height = 50px
+footer_height = 50px
+wrapper_width = 1000px
+inner_side_padding = 50px
+
+// Structure
+body
+	background body_bg
+	color text_color
+
+.wrapper
+	max-width wrapper_width
+	margin 0 auto
+
+header
+	height header_height
+	width wrapper_width
+	position fixed
+	top 0px
+	background header_bg
+	box-shadow #ccc 3px 3px 3px 0
+
+footer
+	height footer_height
+	width wrapper_width
+	position fixed
+	bottom 0px
+	background footer_bg
+	box-shadow #ccc 3px -3px 3px 0
+
+.content
+	background content_bg
+	margin-top header_height
+	margin-bottom footer_height
+
+	.padding_wrapper
+		padding 45px inner_side_padding
+
+// Typography
+body
+	font font_size sans-serif
+p
+	padding-bottom 15px
+	font-size 1em
+	text-align justify
+a
+	color link_color
+	transition color .2s
+	&:hover
+		color link_colorh
+	&.outside-link
+		padding-right 15px
+		background url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAG1JREFUeNpi/P//P0PazBP8DAwMHxjwABYk9sdZ6RYC2BQBDfrPAiLQBZH5QM2MIJoJygeZ9BEmAZNEBky4rEJXzIKmAOSph9hMZEFzz0eoM1Dch66QH90jKCB1xvH/oLDEhpHlWLAFCTYAEGAAyd9DirKOsQYAAAAASUVORK5CYII=') right center no-repeat
+
+
+// Logo
+.logo
+	float left
+	padding 5px inner_side_padding
+
+	& a
+		position relative
+		transition top 0.2s
+		&:hover
+			top -3px
+	
+
+// Navigation
+.navigation
+	clearfix()
+
+	&.right
+		float right
+
+	ul
+		padding 0 inner_side_padding
+	li
+		float left
+		padding 15px 30px 0 0
+
+
+
+
+// Helpers
