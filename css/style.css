@@ -157,7 +157,7 @@ body {
   font: 17px sans-serif;
 }
 p {
-  padding-bottom: 15px;
+  padding-bottom: 1.5em;
   font-size: 1em;
   text-align: justify;
 }
@@ -176,6 +176,29 @@ a.outside-link {
   padding-right: 15px;
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAG1JREFUeNpi/P//P0PazBP8DAwMHxjwABYk9sdZ6RYC2BQBDfrPAiLQBZH5QM2MIJoJygeZ9BEmAZNEBky4rEJXzIKmAOSph9hMZEFzz0eoM1Dch66QH90jKCB1xvH/oLDEhpHlWLAFCTYAEGAAyd9DirKOsQYAAAAASUVORK5CYII=") right center no-repeat;
 }
+a.active {
+  cursor: default;
+  text-decoration: none;
+  color: #c33;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  font-size: 1.75em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h4 {
+  font-size: 1.25em;
+}
+h1,
+h2,
+h3,
+h4 {
+  padding-bottom: 1em;
+}
 .logo {
   float: left;
   padding: 5px 50px;
@@ -190,6 +213,12 @@ a.outside-link {
 }
 .logo a:hover {
   top: -3px;
+}
+.logo a.active {
+  cursor: default;
+  text-decoration: none;
+  color: #c33;
+  top: 0;
 }
 .navigation {
   zoom: 1;
@@ -211,4 +240,22 @@ a.outside-link {
 .navigation li {
   float: left;
   padding: 15px 30px 0 0;
+}
+.pic {
+  margin: 15px;
+  -webkit-transition: outline 0.2s;
+  -moz-transition: outline 0.2s;
+  -o-transition: outline 0.2s;
+  -ms-transition: outline 0.2s;
+  transition: outline 0.2s;
+  line-height: 0px;
+}
+.pic.left {
+  float: left;
+}
+.pic.right {
+  float: right;
+}
+.pic:hover {
+  outline: #c33 solid 3px;
 }
