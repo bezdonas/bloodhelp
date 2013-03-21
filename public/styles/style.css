@@ -131,6 +131,7 @@ header {
   height: 50px;
   width: 1000px;
   position: fixed;
+  z-index: 10;
   top: 0px;
   background: #fcc;
   -webkit-box-shadow: #ccc 3px 3px 3px 0;
@@ -140,6 +141,7 @@ footer {
   height: 50px;
   width: 1000px;
   position: fixed;
+  z-index: 10;
   bottom: 0px;
   background: #fcc;
   -webkit-box-shadow: #ccc 3px -3px 3px 0;
@@ -152,6 +154,15 @@ footer {
 }
 .content .padding_wrapper {
   padding: 45px 50px;
+  zoom: 1;
+}
+.content .padding_wrapper:before,
+.content .padding_wrapper:after {
+  content: "";
+  display: table;
+}
+.content .padding_wrapper:after {
+  clear: both;
 }
 body {
   font: 17px sans-serif;
@@ -160,6 +171,12 @@ p {
   padding-bottom: 1.5em;
   font-size: 1em;
   text-align: justify;
+}
+blockquote {
+  padding-bottom: 2.5em;
+  padding-left: 3em;
+  font-size: 0.9em;
+  font-style: italic;
 }
 a {
   color: #39c;
@@ -243,12 +260,8 @@ h4 {
 }
 .pic {
   margin: 10px 20px;
-  -webkit-transition: outline 0.2s;
-  -moz-transition: outline 0.2s;
-  -o-transition: outline 0.2s;
-  -ms-transition: outline 0.2s;
-  transition: outline 0.2s;
   line-height: 0px;
+  position: relative;
 }
 .pic.left {
   float: left;
@@ -256,6 +269,17 @@ h4 {
 .pic.right {
   float: right;
 }
-.pic:hover {
-  outline: #c33 solid 3px;
+a.pic {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
 }
+a.pic:hover {
+  right: 3px;
+  bottom: 3px;
+  -webkit-box-shadow: #ccc 3px 3px 3px 0;
+  box-shadow: #ccc 3px 3px 3px 0;
+}
+
